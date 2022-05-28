@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang = "en">
+<title>Receipe - Contact Us</title>
+
+<head>
+<meta name = "viewport" content = "width=device-width initial-scale=1" user-scalable = "yes">
+<link rel = "preconnect"  href = "https://github.com/cool31/w3schools_project/main/..../">
+<link rel = "prerender"  href = "https://github.com/cool31/w3schools_project/main/..../">
+<link rel = "prefetch"  href = "https://github.com/cool31/w3schools_project/main/..../">
+<link rel = "DNS-Prefetch"  href = "https://github.com/cool31/w3schools_project/main/..../">
+
+<link rel="stylesheet" type="text/css" href="https://w3schools.com/.../stylesheet.css">
+
+<script src="path/to.js"></script>
+
+<script src="https://kit.fontawesome.com/a86d3779f6.js" crossorigin="anonymous" ></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+body{
+    margin: 0;
+    padding: 0;
+  }
+
+*{
+  border-sizing: border-box;
+  width: 70%;
+  height: auto;
+}
+
+a[href^="tel:"]{
+   color: white;
+   background-image: linear-gradient(to bottom, #5CC3FF, #0060BF);
+   text-decoration: underline;
+   font-family: fantasy;
+   border-radius: 14px;
+   font-size: 20px;
+   width: auto;
+}
+
+a[href$="text"]{
+    background-image: inherit;
+    text-decoration: underline;
+}
+
+input::placeholder{
+   background-color: #BDB76B;
+   color: #FFFFFF;
+ }
+
+button{
+    background-color: red;
+    color: white;
+}
+
+textarea{
+    background-image: url('https://github.com/cool31/w3schools_project/main/scenary/sun.gif');
+    color: #ADD8E6;
+    font-size: larger;
+  }
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+#logo{
+transform: translate(350px, -570px);
+width: 270px;
+height: 170px;
+border-radius: 45%;
+background-color: red;
+color: white;
+}
+
+</style>
+</head>
+
+<body>
+<form id = "fine">
+<fieldset>
+ <legend>REGISTRATION FORM</legend>
+ FULL NAME:<br/>
+   <input type = "text" name = "firstname" value = " " onfocus="style='background-color:yellow'"+
+   onblur= "style='background-color: green';"><br/>
+ADDRESS: <br/>
+       <input type = "text" name = "address" value = " "><br/>
+</address>
+EMAIL ID:
+   <input type = "email" name = "email" value = " "><br/>
+WEBSITE:
+ <input type = "url" name = "url" value = " "><br/>
+MOBILE NO:
+<input type = "number" name = "mobile" " value = " "><br/>
+
+Enter birthday date before 1980-01-01:
+       <button style = "font-size:16px"><i class =
+        "material-icons">card_giftcard</i></button>
+         <button style = "font-size:16px"><i class =
+          "material-icons">record_voice_over</i></button><br/>
+            <input type = "date" name = "bday" max =
+             "1979-12-31"><br/>
+
+Enter birthdaydate after 2000-01-01:
+          <input type = "date" name = "bday1" min =
+          "2000-01-02"><br/>
+        <button style ="font-size:16px"><i class =
+      "material-icons">card_giftcard</i></button>
+     <button style = "font-size:16px">
+   <i class = "material-icons">record_voice_over</i></button><br/>
+
+Enter date of form submission and local time:
+<input type = "datetime-local" name ="form_submission"><br/>
+COMMENTS: <br/>
+  <textarea name= "message" rows = "3" cols = "40"></textarea><br/>
+   <button>Submit</button>
+<br>
+<input type= "radio" name ="yes">Committed error in form submission, want to  resubmit again"?<button>Reset</button>
+
+Photographer or ?? Upload your special created image file to publish on web:
+  <input type = "file" name = "myFile" multiple>
+  <input type = "submit" value = "upload to submit" name = "submit" onclick="alert('Thank you for submitting form.  Have a wonderful day!')">
+  </fieldset>
+</form>
+
+<form id = "logo">
+<fieldset>
+ <legend style= "color: dodgerblue;">LOGIN</legend>
+ FULL NAME:<br/>
+   <input type = "text" name = "firstname" value = " " onfocus="style='background-color:yellow'"+
+   onblur= "style='background-color: green';"><br/>
+EMAIL ID:
+   <input type = "email" name = "email" value = " "><br/>
+MOBILE NO:
+<input type = "number" name = "mobile" " value = " "><br/>
+<button onsubmit= alert("Thank you for registration and login.  Enjoy your stay")>Submit</button>
+</body>
+</html>
