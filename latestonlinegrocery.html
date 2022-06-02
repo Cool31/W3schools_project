@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-<meta charset ="utf-8">
+
 <title>Online Grocery Store</title>
 
 
@@ -168,7 +168,7 @@ width: 83.33%;
 }
 
 
-#dist, #desp{
+#dist, #desp, #weight{
 width: 20rem;
 height: 15rem;
 border: 20px solid red;
@@ -191,7 +191,6 @@ text-align: center;
 
 overflow: scroll;
 }
-
 </style>
 
 </head>
@@ -210,7 +209,7 @@ overflow: scroll;
 <a href="https://sureshs2022.w3spaces.com/imagioboxproject/popupmusicsubscribe.html#subscribe">Subscribe</a><br />
 <a href="https://sureshs2022.w3spaces.com/imagioboxproject/signmodel.html#sign">Sign Up</a>
 
-<a href="https://sureshs2022.w3spaces.com/imagioboxproject/blog.html#blog">Blog</a>
+<a href="https://sureshs2022.w3spaces.com/imagioboxproject/animeslideshow.html#animeslide">Cartoon Slides</a>
 <a href="https://sureshs2022.w3spaces.com/imagioboxproject/index.html#index"></a>
 
 <a href="https://sureshs2022.w3spaces.com/imagioboxproject/createcondb.py"></a>
@@ -234,7 +233,8 @@ method="post" enctype="multipart/form-data">
 
 <fieldset>
 
-<legend><b>Purchase Bulk Order Form @Discount Rate (Fixed Value)</b></legend>
+<legend><b>Purchase Bulk Order Form @Discount Rate (Fixed Value) - WELCOME TO 
+GEORGIA GROCERY STORES</b></legend>
 
 
 <table id = "myta">
@@ -242,9 +242,9 @@ method="post" enctype="multipart/form-data">
 <td>
 <b><i>Order Date:</i></b>
 <input type="date" id="dat" name= "order[]"  value=""  style="width:80px;" /></td>
-<td><b><i>Order No.</i></b><input type="number" id="ords" name = "order[]" value=""  pattern = "[0-9]" style="width:30px;" /></td>
+<td><b><i>Order No.</i></b><input type="number" id="ords" name = "order[]" value=""  style="width:30px;" /></td>
 <td><b><i>Full Name:</i></b><input id="fname" name = "order[]"  value="" pattern = "[a-z][A-Z]" /></td>
-<td><b><i>Mobile:</i></b><input id="number" name = "order[]"  value=" " pattern = "[0-9]"/></td>
+<td><b><i>Mobile:</i></b><input id="number" name = "order[]"  value=" "/></td>
 <td><b><i>Shipping address:</i></b><input type="text" id="ship" name = "order[]"  value=" " pattern = "[a-z][A-Z]" /></td>
 
 <td><select id = "shipadd" name="order[]" value= "">
@@ -266,7 +266,7 @@ method="post" enctype="multipart/form-data">
 <td><b><i>Apples:</i></b><input id="van" name = "order[]"  value=" " style="width: 50px;" /></td>
 <td><b><i>Pineapple:</i></b><input id="dan" name = "order[]"  value=" " style="width: 50px;" />
 </td>
-<td><b><i>Gauva:</i></b><input id="bun" name = "order[]"  value=" " style="width: 50px;" /></td>
+<td><b><i>Guava:</i></b><input id="bun" name = "order[]"  value=" " style="width: 50px;" /></td>
 <td><b><i>Grapes Green:</i></b><input id="sun" name = "order[]"  value=" " style="width: 50px;" /></td>
 <td><b><i>Bananas:</i></b><input id="pun" name = "order[]"  value=" " style="width: 50px;" /></td>
 <td><b><i>Peaches:</i></b><input id="tun" name = "order[]"  value=" " style="width: 50px;" />
@@ -307,9 +307,8 @@ Click to Check Prices</a><br />
 
 <p id = "dist"></p>
 <p id = "desp"></p>
-
-<script>  
-document.body.querySelectorAll("shipadd, shipemploy").backgroundColor = "red";
+<p id = "weight"></p>
+<script>
 var i, order, cost,  xxp, yy, zz;
 alert("Minimum purchase orders@Rs.3,500 to avail discount offers....File updation in progress");
 
@@ -327,6 +326,36 @@ cost = cost + "order[" + i + "].value" + yy.value + "<br/> ";
 
 var grap, cherr, oran, apple, papple, guav, gragreen, bana, peach;
 var apri, cashew, dryfr; 
+var grapenet, cherrynet, orangenet, applenet, papplenet, pinenet, guavanet;
+var greennet, banananet, peachnet, aprinet, cashnet, drynet;
+var netwt, totalwt, finalwt;
+
+grapenet = Math.floor(xxp[7].value);
+cherrynet = Number(xxp[8].value);
+orangenet = parseInt(xxp[9].value);
+applenet = parseFloat(xxp[10].value);
+papplenet = xxp[11].value;
+pinenet = (papplenet *1);
+guavanet = +xxp[12].value;
+greennet = ~~xxp[13].value;
+banananet = Math.floor(xxp[14].value);
+peachnet = Number(xxp[15].value);
+aprinet = parseInt(xxp[16].value);
+cashnet = parseFloat(xxp[17].value);
+drynet = parseFloat(xxp[18].value);
+
+netwt = [grapenet, cherrynet, orangenet, applenet, pinenet, guavanet, greennet, banananet, peachnet, aprinet, cashnet, drynet];
+totalwt = netwt.filter(fund);
+function fund(value, index, array)
+{
+return value;
+}
+
+finalwt = netwt.reduceRight(fundsall)
+function fundsall(total, value, array)
+{
+return total + value;
+}
 
 grap = (xxp[7].value * 120.00);
 
@@ -352,10 +381,8 @@ cashew = (xxp[17].value * 140.50);
 
 dryfr = (xxp[18].value * 290.50);
 
-/*Another method o create an another array inside frui[], split both arrays, sum up numbers*/
+/*Another method to create an another array inside frui[], split both arrays, sum up numbers*/
 var frui = [];
-frui = cost.slice(7);
-
 var grapes, cherries, oranges, apples, papples, guavas;
 var grapegreen, bananas, peaches, apricots, cashewnuts, dryfruits;
 var fruitall, discount;
@@ -374,13 +401,14 @@ cashewnuts = parseFloat(Number(cashew));
 dryfruits = parseFloat(Number(dryfr));
 
 frui = [grapes, cherries, oranges, apples, papples, guavas, grapegreen, bananas, peaches, apricots, cashewnuts, dryfruits];
-
 fruitall = frui.reduce(myfunda);
 discount = 250;
 
 var charge = parseFloat(xxp[5].value);
-
-var totalwt = frui.slice(7, 18);
+var custo = frui.push(xxp[2].value);
+var customer = frui.toString(custo);
+var orddt = (parseInt(xxp[0].value));
+var ordno = (parseFloat(xxp[1].value));
 
 function myfunda(total, value, index, array)
 {
@@ -397,7 +425,8 @@ grandfruit = (fruitall + charge);
    }
 }
 
-document.getElementById("dist").innerHTML = "Grapes " + "(" + xxp[7].value + " Kg):" + " " + "$" + grap.toFixed(2) + "<br>" +
+document.getElementById("dist").innerHTML = "Purchased Amount Each Product:" + "<br>" +
+"Grapes " + "(" + xxp[7].value + " Kg):" + " " + "$" + grap.toFixed(2) + "<br>" +
 "Cherry:" + "(" + xxp[8].value + " Kg):" + " " + "$" + cherr.toFixed(2) +"<br>" + 
 "Oranges:" + "(" + xxp[9].value + " Kg):" + " " + "$" + oran.toFixed(2) + "<br>" +
 "Apples:" + "(" + xxp[10].value + " Kg):" + " " + "$" +  apple.toFixed(2) +"<br>" +
@@ -413,33 +442,59 @@ document.getElementById("dist").innerHTML = "Grapes " + "(" + xxp[7].value + " K
 "Shipping Amount:" + " " + "$" + charge + "<br>" +
 "Amount Payable:" + "  " + "$" + grandfruit +"<br>" +
 "Total Products:" + " " + custo;
-
 alert("Pay by scan system only");
 
 var custdtls =[];
+
 var custo, customer, orddt, ordno, mobileno, addressee, addr, emp, employ;
 
-custo = custdtls.push(xxp[2].value);
-customer = custdtls.toString(custo);
 
 orddt = (xxp[0].value);
 
+
 ordno = (parseInt(Number(xxp[1].value)));
 
+
+custo = custdtls.push(xxp[2].value);
+
+customer = custdtls.toString(custo);
+
+
+
 mobileno = (parseInt(Number(xxp[3].value)));
-    
+
 addressee = custdtls.push(xxp[4].value);
+
 addr = custdtls.toString(addressee);
 
+
 emp = custdtls.push (xxp[6].value);
+
 employ = custdtls.toString(emp);
-    
+  
+
+
 custdtls = [customer, orddt, ordno, mobileno, addr, employ];
 
-document.getElementById("desp").innerHTML = "Customer Name:" + "" + customer + "<br>" + "Mob No." + "" + mobileno + "<br>" + "Ordered Dt:" + "" + orddt + "<br>"+
-"Ordered Dt:" + "" +  ordno + "<br>" + "Address:" + "" +addr + "" + "<br>" + "Employee ID:" + "" + employ;
-}
 
+
+document.getElementById("desp").innerHTML = "Customer Shipping Details:" + "<br>" +
+"Customer Name:" + "" + customer + "<br>" +
+"Mob No." + "" + mobileno + "<br>" + "Ordered Dt:" + "" + orddt + "<br>"+
+
+"Ordered No:" + "" +  ordno + "<br>" + "Address:" + "" +addr + "" + "<br>" + 
+"Employee ID:" + "" + employ;
+
+
+document.getElementById("weight").innerHTML = "Net Wt Each Product:" + "<br>" +
+"Grapes:" + "" + grapenet + "<br>" + "Cherry:" + "" + cherrynet + "<br>" + 
+"Oranges:" + ""  + orangenet + "<br>" + "Apples:" + "" + applenet + "<br>" +
+"Pineapple:" + ""  + pinenet + "<br>" + "Guava:" + "" + guavanet + "<br>" +
+"Green Grapes:" + ""  + greennet + "<br>" + "Bananas:" + "" + banananet +"<br>" +
+"Peaches:" + ""  + peachnet + "<br>" + "Apricots:" + "" + aprinet +"<br>" +
+"Cashewnuts:" + ""  + cashnet + "<br>" + "Dry Fruits:" + "" + drynet + "<br>" +
+"Total Net Weight;" + " " +finalwt;
+}
 
 </script>
 
@@ -451,6 +506,7 @@ function forward()
 {
 window.history.forward();
 }
+
 
 
 function backward()
