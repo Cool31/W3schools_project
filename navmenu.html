@@ -29,11 +29,11 @@ body, html {
 
 .travelers{
  position: fixed;
-  height: 20%;
-  width: 550px;
+  height: 210px;
+  width: 450px;
   position: relative;
   z-index: 1;
-  top: 20px;
+  top: 10px;
   left: 0;
   background-color: brown;
   color: white;
@@ -113,15 +113,16 @@ font: Blackadder ITC;
 
 <div id="trave" class="travelers">
   <a href="javascript:void(0)" class= "plane" onclick="planetarmac()">X</a>
+  
   <a href="https://github.com/cool31/w3schools_project/main/receipe.html#receipe">Receipes</a>
   <a href="https://github.com/cool31/w3schools_project/main/travelersdelight.html#travelersdelight">Travelers</a>
   <a href= "https://github.com/cool31/w3schools_project/main/blog.html#blog">Blog</a>
    <a href= "https://github.com/cool31/w3schools_project/main/portfolio.html#portfolio">Portfolio</a>
-<!--<a href= "https://github.com/cool31/w3schools_project/main/review.html#review">Review</a>
-<a href= "https://github.com/cool31/w3schools_project/main/events.html#events">Events</a>
-<a href= "https://github.com/cool31/w3schools_project/main/hospital.html#hospital>Hospital</a>-->
+<a href= "https://github.com/cool31/w3schools_project/main/review.html#review">Review</a>
+<a href= "https://github.com/cool31/w3schools_project/main/eve.html#eve">Events</a><br>
+<!--<a href= "https://github.com/cool31/w3schools_project/main/hospital.html#hospital>Hospital</a>-->
 </div>
-
+<br>
 <div id = "offplane">
   <button class = "ticket" onclick="planeland()">Click Here</button>  
 
@@ -143,8 +144,8 @@ with us.</p>
 <script>
 function planeland() {
   document.getElementById("deza").innerHTML =  Date();
-  document.getElementById("trave").style.width = "430px";
-  document.getElementById("offplane").style.marginLeft = "430px";
+  document.getElementById("trave").style.width = "70px";
+  document.getElementById("offplane").style.marginLeft = "70px";
 }
 
 function planetarmac() {
